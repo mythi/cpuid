@@ -31,58 +31,66 @@ const (
 )
 
 const (
-	CMOV        = 1 << iota // i686 CMOV
-	NX                      // NX (No-Execute) bit
-	AMD3DNOW                // AMD 3DNOW
-	AMD3DNOWEXT             // AMD 3DNowExt
-	MMX                     // standard MMX
-	MMXEXT                  // SSE integer functions or AMD MMX ext
-	SSE                     // SSE functions
-	SSE2                    // P4 SSE functions
-	SSE3                    // Prescott SSE3 functions
-	SSSE3                   // Conroe SSSE3 functions
-	SSE4                    // Penryn SSE4.1 functions
-	SSE4A                   // AMD Barcelona microarchitecture SSE4a instructions
-	SSE42                   // Nehalem SSE4.2 functions
-	AVX                     // AVX functions
-	AVX2                    // AVX2 functions
-	FMA3                    // Intel FMA 3
-	FMA4                    // Bulldozer FMA4 functions
-	XOP                     // Bulldozer XOP functions
-	F16C                    // Half-precision floating-point conversion
-	BMI1                    // Bit Manipulation Instruction Set 1
-	BMI2                    // Bit Manipulation Instruction Set 2
-	TBM                     // AMD Trailing Bit Manipulation
-	LZCNT                   // LZCNT instruction
-	POPCNT                  // POPCNT instruction
-	AESNI                   // Advanced Encryption Standard New Instructions
-	CLMUL                   // Carry-less Multiplication
-	HTT                     // Hyperthreading (enabled)
-	HLE                     // Hardware Lock Elision
-	RTM                     // Restricted Transactional Memory
-	RDRAND                  // RDRAND instruction is available
-	RDSEED                  // RDSEED instruction is available
-	ADX                     // Intel ADX (Multi-Precision Add-Carry Instruction Extensions)
-	SHA                     // Intel SHA Extensions
-	AVX512F                 // AVX-512 Foundation
-	AVX512DQ                // AVX-512 Doubleword and Quadword Instructions
-	AVX512IFMA              // AVX-512 Integer Fused Multiply-Add Instructions
-	AVX512PF                // AVX-512 Prefetch Instructions
-	AVX512ER                // AVX-512 Exponential and Reciprocal Instructions
-	AVX512CD                // AVX-512 Conflict Detection Instructions
-	AVX512BW                // AVX-512 Byte and Word Instructions
-	AVX512VL                // AVX-512 Vector Length Extensions
-	AVX512VBMI              // AVX-512 Vector Bit Manipulation Instructions
-	AVX512VNNI              // AVX-512 Vector Neural Network Instructions
-	MPX                     // Intel MPX (Memory Protection Extensions)
-	ERMS                    // Enhanced REP MOVSB/STOSB
-	RDTSCP                  // RDTSCP Instruction
-	CX16                    // CMPXCHG16B Instruction
-	SGX                     // Software Guard Extensions
-	SGXLC                   // Software Guard Extensions Launch Control
-	IBPB                    // Indirect Branch Restricted Speculation (IBRS) and Indirect Branch Predictor Barrier (IBPB)
-	STIBP                   // Single Thread Indirect Branch Predictors
-	VMX                     // Virtual Machine Extensions
+	CMOV               = 1 << iota // i686 CMOV
+	NX                             // NX (No-Execute) bit
+	AMD3DNOW                       // AMD 3DNOW
+	AMD3DNOWEXT                    // AMD 3DNowExt
+	MMX                            // standard MMX
+	MMXEXT                         // SSE integer functions or AMD MMX ext
+	SSE                            // SSE functions
+	SSE2                           // P4 SSE functions
+	SSE3                           // Prescott SSE3 functions
+	SSSE3                          // Conroe SSSE3 functions
+	SSE4                           // Penryn SSE4.1 functions
+	SSE4A                          // AMD Barcelona microarchitecture SSE4a instructions
+	SSE42                          // Nehalem SSE4.2 functions
+	AVX                            // AVX functions
+	AVX2                           // AVX2 functions
+	FMA3                           // Intel FMA 3
+	FMA4                           // Bulldozer FMA4 functions
+	XOP                            // Bulldozer XOP functions
+	F16C                           // Half-precision floating-point conversion
+	BMI1                           // Bit Manipulation Instruction Set 1
+	BMI2                           // Bit Manipulation Instruction Set 2
+	TBM                            // AMD Trailing Bit Manipulation
+	LZCNT                          // LZCNT instruction
+	POPCNT                         // POPCNT instruction
+	AESNI                          // Advanced Encryption Standard New Instructions
+	CLMUL                          // Carry-less Multiplication
+	HTT                            // Hyperthreading (enabled)
+	HLE                            // Hardware Lock Elision
+	RTM                            // Restricted Transactional Memory
+	RDRAND                         // RDRAND instruction is available
+	RDSEED                         // RDSEED instruction is available
+	ADX                            // Intel ADX (Multi-Precision Add-Carry Instruction Extensions)
+	SHA                            // Intel SHA Extensions
+	AVX512F                        // AVX-512 Foundation
+	AVX512DQ                       // AVX-512 Doubleword and Quadword Instructions
+	AVX512IFMA                     // AVX-512 Integer Fused Multiply-Add Instructions
+	AVX512PF                       // AVX-512 Prefetch Instructions
+	AVX512ER                       // AVX-512 Exponential and Reciprocal Instructions
+	AVX512CD                       // AVX-512 Conflict Detection Instructions
+	AVX512BW                       // AVX-512 Byte and Word Instructions
+	AVX512VL                       // AVX-512 Vector Length Extensions
+	AVX512VBMI                     // AVX-512 Vector Bit Manipulation Instructions
+	AVX512VBMI2                    // AVX-512 Vector Bit Manipulation Instructions, Version 2
+	AVX512VNNI                     // AVX-512 Vector Neural Network Instructions
+	AVX512VPOPCNTDQ                // AVX-512 Vector Population Count Doubleword and Quadword
+	AVX512GFNI                     // AVX-512 Galois Field New Instructions
+	AVX512VAES                     // AVX-512 Vector AES
+	AVX512BITALG                   // AVX-512 Bit Algorithms
+	AVX512VPCLMULQDQ               // AVX-512 Vector Vector Carry-less Multiply
+	AVX512BF16                     // AVX-512
+	AVX512VP2INTERSECT             // AVX-512
+	MPX                            // Intel MPX (Memory Protection Extensions)
+	ERMS                           // Enhanced REP MOVSB/STOSB
+	RDTSCP                         // RDTSCP Instruction
+	CX16                           // CMPXCHG16B Instruction
+	SGX                            // Software Guard Extensions
+	SGXLC                          // Software Guard Extensions Launch Control
+	IBPB                           // Indirect Branch Restricted Speculation (IBRS) and Indirect Branch Predictor Barrier (IBPB)
+	STIBP                          // Single Thread Indirect Branch Predictors
+	VMX                            // Virtual Machine Extensions
 
 	// Performance indicators
 	SSE2SLOW // SSE2 is supported, but usually not faster
@@ -91,58 +99,66 @@ const (
 )
 
 var flagNames = map[Flags]string{
-	CMOV:        "CMOV",        // i686 CMOV
-	NX:          "NX",          // NX (No-Execute) bit
-	AMD3DNOW:    "AMD3DNOW",    // AMD 3DNOW
-	AMD3DNOWEXT: "AMD3DNOWEXT", // AMD 3DNowExt
-	MMX:         "MMX",         // Standard MMX
-	MMXEXT:      "MMXEXT",      // SSE integer functions or AMD MMX ext
-	SSE:         "SSE",         // SSE functions
-	SSE2:        "SSE2",        // P4 SSE2 functions
-	SSE3:        "SSE3",        // Prescott SSE3 functions
-	SSSE3:       "SSSE3",       // Conroe SSSE3 functions
-	SSE4:        "SSE4.1",      // Penryn SSE4.1 functions
-	SSE4A:       "SSE4A",       // AMD Barcelona microarchitecture SSE4a instructions
-	SSE42:       "SSE4.2",      // Nehalem SSE4.2 functions
-	AVX:         "AVX",         // AVX functions
-	AVX2:        "AVX2",        // AVX functions
-	FMA3:        "FMA3",        // Intel FMA 3
-	FMA4:        "FMA4",        // Bulldozer FMA4 functions
-	XOP:         "XOP",         // Bulldozer XOP functions
-	F16C:        "F16C",        // Half-precision floating-point conversion
-	BMI1:        "BMI1",        // Bit Manipulation Instruction Set 1
-	BMI2:        "BMI2",        // Bit Manipulation Instruction Set 2
-	TBM:         "TBM",         // AMD Trailing Bit Manipulation
-	LZCNT:       "LZCNT",       // LZCNT instruction
-	POPCNT:      "POPCNT",      // POPCNT instruction
-	AESNI:       "AESNI",       // Advanced Encryption Standard New Instructions
-	CLMUL:       "CLMUL",       // Carry-less Multiplication
-	HTT:         "HTT",         // Hyperthreading (enabled)
-	HLE:         "HLE",         // Hardware Lock Elision
-	RTM:         "RTM",         // Restricted Transactional Memory
-	RDRAND:      "RDRAND",      // RDRAND instruction is available
-	RDSEED:      "RDSEED",      // RDSEED instruction is available
-	ADX:         "ADX",         // Intel ADX (Multi-Precision Add-Carry Instruction Extensions)
-	SHA:         "SHA",         // Intel SHA Extensions
-	AVX512F:     "AVX512F",     // AVX-512 Foundation
-	AVX512DQ:    "AVX512DQ",    // AVX-512 Doubleword and Quadword Instructions
-	AVX512IFMA:  "AVX512IFMA",  // AVX-512 Integer Fused Multiply-Add Instructions
-	AVX512PF:    "AVX512PF",    // AVX-512 Prefetch Instructions
-	AVX512ER:    "AVX512ER",    // AVX-512 Exponential and Reciprocal Instructions
-	AVX512CD:    "AVX512CD",    // AVX-512 Conflict Detection Instructions
-	AVX512BW:    "AVX512BW",    // AVX-512 Byte and Word Instructions
-	AVX512VL:    "AVX512VL",    // AVX-512 Vector Length Extensions
-	AVX512VBMI:  "AVX512VBMI",  // AVX-512 Vector Bit Manipulation Instructions
-	AVX512VNNI:  "AVX512VNNI",  // AVX-512 Vector Neural Network Instructions
-	MPX:         "MPX",         // Intel MPX (Memory Protection Extensions)
-	ERMS:        "ERMS",        // Enhanced REP MOVSB/STOSB
-	RDTSCP:      "RDTSCP",      // RDTSCP Instruction
-	CX16:        "CX16",        // CMPXCHG16B Instruction
-	SGX:         "SGX",         // Software Guard Extensions
-	SGXLC:       "SGXLC",       // Software Guard Extensions Launch Control
-	IBPB:        "IBPB",        // Indirect Branch Restricted Speculation and Indirect Branch Predictor Barrier
-	STIBP:       "STIBP",       // Single Thread Indirect Branch Predictors
-	VMX:         "VMX",         // Virtual Machine Extensions
+	CMOV:               "CMOV",               // i686 CMOV
+	NX:                 "NX",                 // NX (No-Execute) bit
+	AMD3DNOW:           "AMD3DNOW",           // AMD 3DNOW
+	AMD3DNOWEXT:        "AMD3DNOWEXT",        // AMD 3DNowExt
+	MMX:                "MMX",                // Standard MMX
+	MMXEXT:             "MMXEXT",             // SSE integer functions or AMD MMX ext
+	SSE:                "SSE",                // SSE functions
+	SSE2:               "SSE2",               // P4 SSE2 functions
+	SSE3:               "SSE3",               // Prescott SSE3 functions
+	SSSE3:              "SSSE3",              // Conroe SSSE3 functions
+	SSE4:               "SSE4.1",             // Penryn SSE4.1 functions
+	SSE4A:              "SSE4A",              // AMD Barcelona microarchitecture SSE4a instructions
+	SSE42:              "SSE4.2",             // Nehalem SSE4.2 functions
+	AVX:                "AVX",                // AVX functions
+	AVX2:               "AVX2",               // AVX functions
+	FMA3:               "FMA3",               // Intel FMA 3
+	FMA4:               "FMA4",               // Bulldozer FMA4 functions
+	XOP:                "XOP",                // Bulldozer XOP functions
+	F16C:               "F16C",               // Half-precision floating-point conversion
+	BMI1:               "BMI1",               // Bit Manipulation Instruction Set 1
+	BMI2:               "BMI2",               // Bit Manipulation Instruction Set 2
+	TBM:                "TBM",                // AMD Trailing Bit Manipulation
+	LZCNT:              "LZCNT",              // LZCNT instruction
+	POPCNT:             "POPCNT",             // POPCNT instruction
+	AESNI:              "AESNI",              // Advanced Encryption Standard New Instructions
+	CLMUL:              "CLMUL",              // Carry-less Multiplication
+	HTT:                "HTT",                // Hyperthreading (enabled)
+	HLE:                "HLE",                // Hardware Lock Elision
+	RTM:                "RTM",                // Restricted Transactional Memory
+	RDRAND:             "RDRAND",             // RDRAND instruction is available
+	RDSEED:             "RDSEED",             // RDSEED instruction is available
+	ADX:                "ADX",                // Intel ADX (Multi-Precision Add-Carry Instruction Extensions)
+	SHA:                "SHA",                // Intel SHA Extensions
+	AVX512F:            "AVX512F",            // AVX-512 Foundation
+	AVX512DQ:           "AVX512DQ",           // AVX-512 Doubleword and Quadword Instructions
+	AVX512IFMA:         "AVX512IFMA",         // AVX-512 Integer Fused Multiply-Add Instructions
+	AVX512PF:           "AVX512PF",           // AVX-512 Prefetch Instructions
+	AVX512ER:           "AVX512ER",           // AVX-512 Exponential and Reciprocal Instructions
+	AVX512CD:           "AVX512CD",           // AVX-512 Conflict Detection Instructions
+	AVX512BW:           "AVX512BW",           // AVX-512 Byte and Word Instructions
+	AVX512VL:           "AVX512VL",           // AVX-512 Vector Length Extensions
+	AVX512VBMI:         "AVX512VBMI",         // AVX-512 Vector Bit Manipulation Instructions
+	AVX512VBMI2:        "AVX512VBMI2",        // AVX-512 Vector Bit Manipulation Instructions, Version 2
+	AVX512VNNI:         "AVX512VNNI",         // AVX-512 Vector Neural Network Instructions
+	AVX512VPOPCNTDQ:    "AVX512VPOPCNTDQ",    // AVX-512 Vector Population Count Doubleword and Quadword
+	AVX512GFNI:         "AVX512GFNI",         // AVX-512 Galois Field New Instructions
+	AVX512VAES:         "AVX512VAES",         // AVX-512 Vector AES
+	AVX512BITALG:       "AVX512BITALG",       // AVX-512 Bit Algorithms
+	AVX512VPCLMULQDQ:   "AVX512VPCLMULQDQ",   // AVX-512 Vector Vector Carry-less Multiply
+	AVX512BF16:         "AVX512BF16",         // AVX-512
+	AVX512VP2INTERSECT: "AVX512VP2INTERSECT", // AVX-512
+	MPX:                "MPX",                // Intel MPX (Memory Protection Extensions)
+	ERMS:               "ERMS",               // Enhanced REP MOVSB/STOSB
+	RDTSCP:             "RDTSCP",             // RDTSCP Instruction
+	CX16:               "CX16",               // CMPXCHG16B Instruction
+	SGX:                "SGX",                // Software Guard Extensions
+	SGXLC:              "SGXLC",              // Software Guard Extensions Launch Control
+	IBPB:               "IBPB",               // Indirect Branch Restricted Speculation and Indirect Branch Predictor Barrier
+	STIBP:              "STIBP",              // Single Thread Indirect Branch Predictors
+	VMX:                "VMX",                // Virtual Machine Extensions
 
 	// Performance indicators
 	SSE2SLOW: "SSE2SLOW", // SSE2 supported, but usually not faster
@@ -914,6 +930,7 @@ func support() Flags {
 	// Check AVX2, AVX2 requires OS support, but BMI1/2 don't.
 	if mfi >= 7 {
 		_, ebx, ecx, edx := cpuidex(7, 0)
+		eax1, _, _, _ := cpuidex(7, 1)
 		if (rval&AVX) != 0 && (ebx&0x00000020) != 0 {
 			rval |= AVX2
 		}
@@ -994,8 +1011,34 @@ func support() Flags {
 				if ecx&(1<<1) != 0 {
 					rval |= AVX512VBMI
 				}
+				if ecx&(1<<6) != 0 {
+					rval |= AVX512VBMI2
+				}
+				if ecx&(1<<8) != 0 {
+					rval |= AVX512GFNI
+				}
+				if ecx&(1<<9) != 0 {
+					rval |= AVX512VAES
+				}
+				if ecx&(1<<10) != 0 {
+					rval |= AVX512VPCLMULQDQ
+				}
+				if ecx&(1<<12) != 0 {
+					rval |= AVX512BITALG
+				}
+				if ecx&(1<<14) != 0 {
+					rval |= AVX512VPOPCNTDQ
+				}
 				if ecx&(1<<11) != 0 {
 					rval |= AVX512VNNI
+				}
+				// edx
+				if edx&(1<<8) != 0 {
+					rval |= AVX512VP2INTERSECT
+				}
+				// cpuid eax 07h,ecx=1
+				if eax1&(1<<5) != 0 {
+					rval |= AVX512BF16
 				}
 			}
 		}
