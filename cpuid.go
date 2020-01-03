@@ -79,6 +79,7 @@ const (
 	RDTSCP                  // RDTSCP Instruction
 	CX16                    // CMPXCHG16B Instruction
 	SGX                     // Software Guard Extensions
+	SGXLC                   // Software Guard Extensions Launch Control
 	IBPB                    // Indirect Branch Restricted Speculation (IBRS) and Indirect Branch Predictor Barrier (IBPB)
 	STIBP                   // Single Thread Indirect Branch Predictors
 	VMX                     // Virtual Machine Extensions
@@ -138,6 +139,7 @@ var flagNames = map[Flags]string{
 	RDTSCP:      "RDTSCP",      // RDTSCP Instruction
 	CX16:        "CX16",        // CMPXCHG16B Instruction
 	SGX:         "SGX",         // Software Guard Extensions
+	SGXLC:       "SGXLC",       // Software Guard Extensions Launch Control
 	IBPB:        "IBPB",        // Indirect Branch Restricted Speculation and Indirect Branch Predictor Barrier
 	STIBP:       "STIBP",       // Single Thread Indirect Branch Predictors
 	VMX:         "VMX",         // Virtual Machine Extensions
@@ -920,6 +922,9 @@ func support() Flags {
 		}
 		if edx&(1<<26) != 0 {
 			rval |= IBPB
+		}
+		if ecx&(1<<30) != 0 {
+			rval |= SGXLC
 		}
 		if edx&(1<<27) != 0 {
 			rval |= STIBP
